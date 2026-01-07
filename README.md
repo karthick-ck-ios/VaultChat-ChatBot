@@ -8,12 +8,13 @@ VaultChat is a lightweight iOS framework that provides an in-app floating chat a
 📦 Installation (CocoaPods)
 
 Add VaultChat to your Podfile:
-pod 'VaultChat', :git => 'https://github.com/karthick-ck-ios/VaultChat.git'
 
+    pod 'VaultChat', :git => 'https://github.com/karthick-ck-ios/VaultChat.git'
 
 Then install:
-pod install
 
+    pod install
+    
 Open the generated .xcworkspace file.
 
 ✅ Requirements
@@ -26,19 +27,16 @@ Swift 5+
 Before using VaultChat, initialize it once at app launch or view creation.
 
 🔹 Parameters
-Parameter	Description
-apiKey	Your VaultChat API key
-primaryColorHex	Primary theme color in HEX
-theme	.light, .dark, .system
+Parameter	    Description
+apiKey	        Your VaultChat API key
+primaryColor    Hex	Primary theme color in HEX
+theme	        .light, .dark, .system
 buttonContent	SF Symbol or text
-buttonType	.image or .text
-buttonShape	.circle, .square, etc.
+buttonType	    .image or .text
+buttonShape	    .circle, .square, etc.
 
 🧭 Usage in UIKit
 Call initialization inside viewDidLoad, then add the floating button.
-
-override func viewDidLoad() {
-    super.viewDidLoad()
 
     VaultChat.initialize(
         apiKey: "API-KEY",
@@ -48,15 +46,14 @@ override func viewDidLoad() {
         buttonType: .image,
         buttonShape: .square
     )
-
     self.addVaultChatFloatingButton()
-}
+
 
 🟣 Usage in SwiftUI
 
 Initialize inside the view init().
 
-init() {
+    init() {
     VaultChat.initialize(
         apiKey: "API-KEY",
         primaryColorHex: "#2663EB",
@@ -65,7 +62,7 @@ init() {
         buttonType: .image,
         buttonShape: .square
     )
-}
+    }
 
 🎨 Customization Options
 Floating button size
